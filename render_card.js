@@ -28,7 +28,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Postcard "Finding myself again"",
+    name: "Postcard Finding myself again",
     price: 35000,
     priceDisplay: "35,000đ",
     mainImg: "./note_7.png",
@@ -125,7 +125,7 @@ function addToCart(product) {
 
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
-  
+
   // Show notification
   showNotification("Đã thêm sản phẩm vào giỏ hàng!");
 }
@@ -135,11 +135,11 @@ function showNotification(message) {
   notification.className = "cart-notification";
   notification.textContent = message;
   document.body.appendChild(notification);
-  
+
   setTimeout(() => {
     notification.classList.add("show");
   }, 10);
-  
+
   setTimeout(() => {
     notification.classList.remove("show");
     setTimeout(() => {
